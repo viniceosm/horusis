@@ -1,0 +1,85 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	height: 100vh;
+	margin: 0px;
+	background-color: rgb(231, 164, 164);
+}
+
+a {
+	text-decoration: none;
+	font-weight: 900;
+}
+
+.title {
+	margin-top: calc(50% - (1.5em));
+	width: 100%;
+	text-align: center;
+	font-size: 20px;
+}
+
+#content {
+	position: relative;
+	overflow: auto;
+	padding: 20px;
+}
+
+#content li {
+	list-style-type:none;
+}
+
+#content input {
+	border: 2px solid #a9aaff;
+	padding: 7px 2px;
+	width: 100%;
+}
+
+.name-repo {
+	padding: 0 0 0 10px
+}
+
+#infosRepos p {
+	text-align: center;
+}
+
+@media (min-width: 576px) {
+	/* For tablets: */
+	.title {
+		margin-top: calc(9% - (1.5em / 2));
+	}
+
+	#usuarioVazio {
+		width: 311px;
+		margin: auto;
+	}
+
+	#content input {
+		padding: 7px 2px;
+		display: block;
+		width: 150px;
+		margin: 0 auto;
+	}
+}
+
+@media (min-width: 992px) {
+	/* For desktop: */
+	#infosRepos {
+		width: 50%;
+		margin: auto;
+	}
+
+	#usuarioVazio {
+		width: 311px;
+		margin: auto;
+	}
+
+	#content input {
+		padding: 7px 2px;
+		display: block;
+		width: 150px;
+		margin: 0 auto;
+	}
+}

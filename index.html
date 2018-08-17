@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Horusis</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+	<script src="https://unpkg.com/lodash@4.16.0"></script>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+	<link rel="stylesheet" href="assets/css/index.css">
+</head>
+
+<body class="">
+	<div id="content">
+		<div id="app">
+			<div class="title"><h4 id="titleProject">Horusis</h4></div>
+
+			<input type="date" v-model="dateBirthText" placeholder="User" v-on:keyup.enter="fetchHoros" autofocus />
+
+			<div v-if="!buscandoHoros" id="infosRepos">
+				<p>Horóscopo del día {{ horos.titulo }}</p>
+
+				<p><b>{{ horosUser.nombre }}</b></p>
+
+				<p><b>Intervalo</b></p>
+				<p>{{ horosUser.fechaSigno }}</p>
+
+				<p><b>Amor</b></p>
+				<p>{{ horosUser.amor }}</p>
+
+				<p><b>Salud</b></p>
+				<p>{{ horosUser.salud }}</p>
+
+				<p><b>Dinero</b></p>
+				<p>{{ horosUser.dinero }}</p>
+
+				<p><b>Color</b></p>
+				<p>{{ horosUser.color }}</p>
+
+				<p><b>Numero</b></p>
+				<p>{{ horosUser.numero }}</p>
+			</div>
+			<ul v-if="usuarioVazio" id="usuarioVazio">
+				<li>Escriba su fecha de nacimiento</li>
+			</ul>
+		</div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+	<script src="assets/js/index.js"></script>
+</body>
