@@ -19,7 +19,7 @@
 		<div id="app">
 			<div class="title"><h4 id="titleProject">Horusis</h4></div>
 
-			<input type="date" v-model="dateBirthText" placeholder="User" v-on:keyup.enter="fetchHoros" autofocus />
+			<input type="date" v-model="dateBirthText" placeholder="User" v-on:change="fetchHoros" autofocus />
 
 			<div v-if="!buscandoHoros" id="infosRepos">
 				<p>Horóscopo del día {{ horos.titulo }}</p>

@@ -17,16 +17,18 @@ var demo = new Vue({
 	},
 	methods: {
 		fetchHoros: function () {
-			var xhr = new XMLHttpRequest();
-			var self = this;
-			xhr.open('GET', self.apiURLHoros);
-			xhr.onload = function () {
-				self.horos = JSON.parse(xhr.responseText);
+			if(/....-..-..$/.test(this.dateBirthText)) {
+				var xhr = new XMLHttpRequest();
+				var self = this;
+				xhr.open('GET', self.apiURLHoros);
+				xhr.onload = function () {
+					self.horos = JSON.parse(xhr.responseText);
 
-				self.fetchHorosEnd();
+					self.fetchHorosEnd();
+				}
+				xhr.send()
+				this.buscandoHoros = true;
 			}
-			xhr.send()
-			this.buscandoHoros = true;
 		},
 		fetchHorosEnd() {
 			var self = this;
